@@ -124,3 +124,19 @@ footer {
     font-size: 1.5rem;
   }
 }
+.about {
+  background: #fff;
+  color: #0B1A33;
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about h2 {
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
