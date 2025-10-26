@@ -21,9 +21,11 @@ body {
   background: white;
 }
 .logo {
-  width: clamp(220px, 40vw, 400px);  /* minimum 220px, scales up to 400px max */
+  width: 100%;
+  max-width: 500px;   /* try 500–600px for your preferred size */
   height: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 25px;  /* centers and adds spacing below */
+  display: block;
 }
 .hero h1 {
   font-size: 2rem;
