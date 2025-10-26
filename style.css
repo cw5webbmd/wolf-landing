@@ -140,3 +140,33 @@ footer {
   line-height: 1.7;
   margin-bottom: 15px;
 }
+/* Waitlist Form Styling */
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.waitlist-form input {
+  width: 260px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.waitlist-form button {
+  background: #0B1A33;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.waitlist-form button:hover {
+  background: #1A2E4C;
+}
