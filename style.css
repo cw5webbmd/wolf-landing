@@ -170,3 +170,36 @@ footer {
 .waitlist-form button:hover {
   background: #1A2E4C;
 }
+/* Waitlist Form Styling - Horizontal Layout */
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.waitlist-form input {
+  width: 220px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.waitlist-form button {
+  background: #C0C0C0;           /* Silver base color */
+  color: #0B1A33;                /* Dark navy text */
+  border: 2px solid #0B1A33;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.waitlist-form button:hover {
+  background: #0B1A33;
+  color: #fff;
+  border: 2px solid #0B1A33;
+}
