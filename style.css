@@ -74,38 +74,58 @@ body {
   margin-top: 0;
 }
 
-/* Waitlist Form Styling - Horizontal Layout */
+/* Waitlist Section Layout */
+.waitlist {
+  background: #0B1A33;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.waitlist h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.waitlist p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #F5F2EA;
+}
+
+/* Horizontal Waitlist Form */
 .waitlist-form {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
+/* Inputs */
 .waitlist-form input {
   width: 220px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   font-size: 1rem;
 }
 
+/* Button — matches hero CTA */
 .waitlist-form button {
-  background: #C0C0C0;           /* Silver base color */
-  color: #0B1A33;                /* Dark navy text */
-  border: 2px solid #0B1A33;
-  padding: 10px 24px;
-  border-radius: 4px;
+  background-color: #fff;
+  color: #0B1A33;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .waitlist-form button:hover {
-  background: #0B1A33;
-  color: #fff;
-  border: 2px solid #0B1A33;
+  background-color: #C0C0C0;
+  color: #0B1A33;
 }
 
 /* FOOTER */
