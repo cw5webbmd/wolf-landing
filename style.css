@@ -21,7 +21,8 @@ body {
   background: white;
 }
 .logo {
-  width: 180px;
+  width: clamp(220px, 40vw, 400px);  /* minimum 220px, scales up to 400px max */
+  height: auto;
   margin-bottom: 20px;
 }
 .hero h1 {
