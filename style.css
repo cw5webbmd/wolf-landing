@@ -167,3 +167,14 @@ footer {
   line-height: 1.7;
   margin-bottom: 15px;
 }
+.wolf-meaning {
+  text-align: left;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.wolf-meaning p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
