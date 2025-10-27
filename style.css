@@ -1,180 +1,74 @@
-/*
-  WOLF Trusts & Estate Planning
-  Core styles for pre-launch landing page
-  Palette: Navy #0B1A33, Silver #C0C0C0, Parchment #F5F2EA
-  Author: Martin Webb
-  Date: 2025-10-26
-*/
-
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #F5F2EA;
+/* INTRO SECTION */
+.intro {
+  background: #fff;
   color: #0B1A33;
-  line-height: 1.6;
-}
-
-/* HERO */
-.hero {
   text-align: center;
-  padding: 80px 20px;
-  background: white;
-}
-.logo {
-  width: 100%;
-  max-width: 500px;   /* try 500–600px for your preferred size */
-  height: auto;
-  margin: 0 auto 25px;  /* centers and adds spacing below */
-  display: block;
-}
-.hero h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-.hero p {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 10px 0 30px;
-}
-.cta {
-  background-color: #0B1A33;
-  color: #fff;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.cta:hover {
-  background-color: #1A2E4C;
-}
-
-/* FEATURES */
-.features {
   padding: 60px 20px;
-  background-color: #F5F2EA;
-  text-align: center;
-}
-.features h2 {
-  margin-bottom: 40px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
-.card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.card h3 {
-  margin-top: 0;
-}
 
-/* Waitlist Section Layout */
-.waitlist {
-  background: #0B1A33;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.waitlist h2 {
+.intro h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.waitlist p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #F5F2EA;
-}
-
-/* Horizontal Waitlist Form */
-.waitlist-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* Inputs */
-.waitlist-form input {
-  width: 220px;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-/* Button — matches hero CTA */
-.waitlist-form button {
-  background-color: #fff;
-  color: #0B1A33;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.waitlist-form button:hover {
-  background-color: #C0C0C0;
-  color: #0B1A33;
-}
-
-/* FOOTER */
-footer {
-  background: #fff;
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 0.9rem;
-  color: #333;
-}
-.logo-small {
-  width: 120px;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .logo {
-    width: 140px;
-  }
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-}
-.about {
-  background: #fff;
-  color: #0B1A33;
-  text-align: center;
-  padding: 60px 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.about h2 {
   margin-bottom: 20px;
 }
-.about p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-.wolf-meaning {
-  text-align: left;
-  max-width: 700px;
-  margin: 30px auto;
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.wolf-meaning p {
+/* FAQ SECTION */
+#faq {
+  background-color: #F5F2EA;
+  color: #0B1A33;
+  padding: 70px 20px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+#faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+#faq div {
+  margin-bottom: 25px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#faq h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #0B1A33;
+}
+
+#faq p {
+  margin: 10px 0 0;
   font-size: 1rem;
-  margin-bottom: 12px;
   line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .intro h2, #faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p, #faq p {
+    font-size: 1rem;
+  }
+
+  #faq div {
+    padding: 15px;
+  }
 }
