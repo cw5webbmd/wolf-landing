@@ -261,59 +261,66 @@ footer {
     font-size: 1rem;
   }
 
-  /* ===== Desktop Optimization Enhancements ===== */
+ /* ===== Enhanced Desktop Styling (Laptop/Desktop Fix) ===== */
 
-/* Expand container widths for desktop */
-.intro,
-.features,
-.about,
-#faq {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  box-sizing: border-box;
-}
-
-/* Improve grid layout and spacing on large screens */
+/* Base containers expand fully on large screens */
 @media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-
-  /* Typography scaling for readability */
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .intro h2,
-  .features h2,
-  .about h2,
-  #faq h2 {
-    font-size: 2.2rem;
-  }
-
   body {
     font-size: 1.05rem;
   }
-}
 
-/* Ensure full-width background bands */
-.features,
-.waitlist,
-#faq {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Prevent horizontal overflow */
-html,
-body {
-  overflow-x: hidden;
-}
-
-  #faq div {
-    padding: 15px;
+  /* Hero */
+  .hero {
+    text-align: left;
+    padding: 100px 10%;
   }
-}
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+  }
+  .cta {
+    display: inline-block;
+  }
+
+  /* Intro section */
+  .intro {
+    text-align: left;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 10%;
+  }
+  .intro h2 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+  }
+  .intro p {
+    font-size: 1.2rem;
+    max-width: 900px;
+  }
+
+  /* Features grid */
+  .features {
+    text-align: left;
+    padding: 80px 10%;
+    background-color: #F5F2EA;
+  }
+  .features h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    padding: 30px;
+  }
+
+  /* About section */
+  .ab
