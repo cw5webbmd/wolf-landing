@@ -377,6 +377,34 @@ footer {
     font-size: 1rem;
   }
 
+  /* ===== Intro Section Spacing & Background Fix ===== */
+.intro {
+  position: relative;
+  background: #fff;
+  color: #0B1A33;
+  text-align: center;
+  padding: 80px 20px;          /* increased padding for visual balance */
+  margin-top: 40px;            /* creates space between hero and intro */
+  width: 100%;                 /* ensures white background spans full screen */
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding: 100px 10%;
+    margin-top: 60px;          /* slightly larger gap on desktop */
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    padding: 120px 12%;
+    margin-top: 70px;
+  }
+}
+
+
   #faq div {
     padding: 15px;
   }
