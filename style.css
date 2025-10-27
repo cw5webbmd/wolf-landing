@@ -1,43 +1,55 @@
 /*
   WOLF Trusts & Estate Planning
-  Updated stylesheet aligned with SEO-optimized index.html
+  Unified responsive stylesheet for desktop + mobile
   Palette: Navy #0B1A33, Silver #C0C0C0, Parchment #F5F2EA
   Author: Martin Webb
   Date: 2025-10-27
 */
 
-body {
+/* ===== GLOBAL ===== */
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #F5F2EA;
   color: #0B1A33;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* HERO */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== HERO ===== */
 .hero {
+  background: #fff;
   text-align: center;
   padding: 80px 20px;
-  background: white;
 }
 
 .logo {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   height: auto;
   margin: 0 auto 25px;
-  display: block;
 }
 
 .hero h1 {
   font-size: 2rem;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 .hero p {
   font-size: 1.1rem;
   color: #333;
-  margin: 10px 0 30px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta {
@@ -54,14 +66,14 @@ body {
   background-color: #1A2E4C;
 }
 
-/* INTRO SECTION */
+/* ===== INTRO ===== */
 .intro {
   background: #fff;
   color: #0B1A33;
   text-align: center;
   padding: 60px 20px;
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .intro h2 {
@@ -76,22 +88,23 @@ body {
   color: #333;
 }
 
-/* FEATURES */
+/* ===== FEATURES ===== */
 .features {
-  padding: 60px 20px;
   background-color: #F5F2EA;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .features h2 {
   margin-bottom: 40px;
+  font-size: 2rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -104,9 +117,10 @@ body {
 
 .card h3 {
   margin-top: 0;
+  color: #0B1A33;
 }
 
-/* ABOUT SECTION */
+/* ===== ABOUT ===== */
 .about {
   background: #fff;
   color: #0B1A33;
@@ -118,12 +132,14 @@ body {
 
 .about h2 {
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .about p {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 15px;
+  color: #333;
 }
 
 .wolf-meaning {
@@ -138,7 +154,7 @@ body {
   line-height: 1.7;
 }
 
-/* WAITLIST SECTION */
+/* ===== WAITLIST ===== */
 .waitlist {
   background: #0B1A33;
   color: #fff;
@@ -157,7 +173,7 @@ body {
   color: #F5F2EA;
 }
 
-/* WAITLIST FORM */
+/* Waitlist Form */
 .waitlist-form {
   display: flex;
   justify-content: center;
@@ -190,13 +206,13 @@ body {
   color: #0B1A33;
 }
 
-/* FAQ SECTION */
+/* ===== FAQ ===== */
 #faq {
   background-color: #F5F2EA;
   color: #0B1A33;
   padding: 70px 20px;
   text-align: left;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   border-top: 1px solid #ddd;
 }
@@ -228,7 +244,7 @@ body {
   color: #333;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   background: #fff;
   text-align: center;
@@ -237,90 +253,131 @@ footer {
   color: #333;
 }
 
-.logo-small {
-  width: 120px;
-  display: block;
-  margin: 0 auto 10px;
-}
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 600px) {
-  .logo {
-    width: 140px;
+/* Medium screens (tablets) */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
   }
 
-  .hero h1,
   .intro h2,
+  .features h2,
+  .about h2,
+  .waitlist h2,
   #faq h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .intro p,
-  #faq p,
-  .about p {
-    font-size: 1rem;
+  .about p,
+  .features p {
+    font-size: 1.15rem;
   }
 
- /* ===== Enhanced Desktop Styling (Laptop/Desktop Fix) ===== */
+  .grid {
+    gap: 30px;
+  }
+}
 
-/* Base containers expand fully on large screens */
+/* Large screens (laptops/desktops) */
 @media (min-width: 1024px) {
   body {
     font-size: 1.05rem;
   }
 
-  /* Hero */
-  .hero {
+  /* Wider content layout */
+  .hero,
+  .intro,
+  .features,
+  .about,
+  #faq,
+  .waitlist,
+  footer {
     text-align: left;
-    padding: 100px 10%;
+    padding: 80px 10%;
   }
+
+  .hero {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
+    margin-bottom: 15px;
   }
+
   .hero p {
-    font-size: 1.25rem;
     max-width: 800px;
+    font-size: 1.25rem;
   }
+
   .cta {
     display: inline-block;
   }
 
-  /* Intro section */
-  .intro {
-    text-align: left;
+  .intro,
+  .features,
+  .about,
+  #faq {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 80px 10%;
-  }
-  .intro h2 {
-    font-size: 2.4rem;
-    margin-bottom: 25px;
-  }
-  .intro p {
-    font-size: 1.2rem;
-    max-width: 900px;
   }
 
-  /* Features grid */
-  .features {
+  .intro h2,
+  .features h2,
+  .about h2,
+  #faq h2 {
     text-align: left;
-    padding: 80px 10%;
-    background-color: #F5F2EA;
   }
+
   .features h2 {
-    font-size: 2.4rem;
     text-align: center;
-    margin-bottom: 50px;
   }
+
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
   }
+
   .card {
     padding: 30px;
   }
 
-  /* About section */
-  .ab
+  footer {
+    text-align: left;
+    padding: 60px 10%;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .logo {
+    width: 140px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro h2,
+  .features h2,
+  .about h2,
+  .waitlist h2,
+  #faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p,
+  .about p,
+  #faq p {
+    font-size: 1rem;
+  }
+
+  #faq div {
+    padding: 15px;
+  }
+}
