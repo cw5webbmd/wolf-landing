@@ -1,118 +1,77 @@
-/*
-  WOLF Trusts & Estate Planning
-  Final Responsive Stylesheet — Centered Layout + Hero/Intro Separation Fix
-  Palette: Navy #0B1A33, Silver #C0C0C0, Parchment #F5F2EA
-  Author: Martin Webb
-  Date: 2025-10-27
-*/
+/* WOLF Trusts & Estate Planning — IBM Plex Sans + Inter integration */
 
-/* ===== GLOBAL ===== */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #F5F2EA;
   color: #0B1A33;
+  font-family: 'IBM Plex Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Headings */
+h1, h2, h3 {
+  font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+  font-weight: 600;
+  color: #0B1A33;
+  margin-top: 0;
 }
 
-/* ===== HERO ===== */
-.hero {
-  background: #fff;
-  text-align: center;
-  padding: 80px 20px;
-  border-bottom: 6px solid #F5F2EA; /* creates clear visual separation */
-}
+h1 { font-size: 2rem; letter-spacing: 0.02em; }
+h2 { font-size: 1.75rem; letter-spacing: 0.015em; }
+h3 { font-size: 1.3rem; letter-spacing: 0.01em; }
 
-.logo {
-  width: 100%;
-  max-width: 540px;
-  height: auto;
-  margin: 0 auto 25px;
-}
-
-.hero h1 {
-  font-size: 1.75rem;
-  margin: 0 0 10px;
-}
-
-.hero p {
-  font-size: 1.1rem;
+/* Body Text */
+p, li, input, button {
+  font-family: 'Inter', 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
   color: #333;
-  margin-bottom: 30px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+/* CTA */
 .cta {
   background-color: #0B1A33;
   color: #fff;
   padding: 14px 28px;
-  text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
+.cta:hover { background-color: #1A2E4C; }
 
-.cta:hover {
-  background-color: #1A2E4C;
-}
-
-/* ===== INTRO ===== */
-.intro {
+/* Hero */
+.hero {
   background: #fff;
-  color: #0B1A33;
   text-align: center;
   padding: 80px 20px;
-  margin-top: 50px; /* distinct gap below hero */
+  border-bottom: 6px solid #F5F2EA;
+}
+.logo { max-width: 540px; margin: 0 auto 25px; }
+.launch-text { font-weight: 600; color: #d32f2f; }
+
+/* Sections */
+.intro, .features, .about, .waitlist, #faq {
+  text-align: center;
+  padding: 80px 20px;
   width: 100%;
   box-sizing: border-box;
 }
 
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
+.features, #faq { background-color: #F5F2EA; }
+.about, .intro { background: #fff; }
 
-.intro p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #333;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== FEATURES ===== */
-.features {
-  background-color: #F5F2EA;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.features h2 {
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
+/* Grid Cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .card {
   background: #fff;
   border-radius: 8px;
@@ -120,140 +79,35 @@ img {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #0B1A33;
-}
-
-/* ===== ABOUT ===== */
-.about {
-  background: #fff;
-  color: #0B1A33;
-  text-align: center;
-  padding: 80px 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.about h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.about p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  color: #333;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wolf-meaning {
-  text-align: left;
-  max-width: 700px;
-  margin: 30px auto;
-}
-
-.wolf-meaning p {
-  font-size: 1rem;
-  margin-bottom: 12px;
-  line-height: 1.7;
-}
-
-/* ===== WAITLIST ===== */
+/* Waitlist */
 .waitlist {
   background: #0B1A33;
   color: #fff;
-  text-align: center;
-  padding: 100px 20px;
 }
-
-.waitlist h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.waitlist p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #F5F2EA;
-}
-
-/* Waitlist Form */
-.waitlist-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
+.waitlist h2 { color: #fff; }
+.waitlist p { color: #F5F2EA; }
 
 .waitlist-form input {
+  font-family: 'Inter', sans-serif;
   width: 220px;
   padding: 10px;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
 }
-
 .waitlist-form button {
+  font-family: 'IBM Plex Sans', sans-serif;
   background-color: #fff;
   color: #0B1A33;
   padding: 14px 28px;
   border: none;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.waitlist-form button:hover { background-color: #C0C0C0; }
 
-.waitlist-form button:hover {
-  background-color: #C0C0C0;
-  color: #0B1A33;
-}
-
-/* ===== FAQ ===== */
-#faq {
-  background-color: #F5F2EA;
-  color: #0B1A33;
-  padding: 80px 20px;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 1px solid #ddd;
-}
-
-#faq h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-#faq div {
-  margin-bottom: 25px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  text-align: left;
-}
-
-#faq h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #0B1A33;
-}
-
-#faq p {
-  margin: 10px 0 0;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
   background: #fff;
   text-align: center;
@@ -262,90 +116,14 @@ footer {
   color: #333;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-
-/* Medium screens (tablets) */
+/* Responsive */
 @media (min-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .intro h2,
-  .features h2,
-  .about h2,
-  .waitlist h2,
-  #faq h2 {
-    font-size: 2.2rem;
-  }
-
-  .intro p,
-  .about p,
-  .features p {
-    font-size: 1.15rem;
-  }
-
-  .grid {
-    gap: 30px;
-  }
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
 }
-
-/* Large screens (laptops/desktops) */
-@media (min-width: 1024px) {
-  body {
-    font-size: 1.05rem;
-  }
-
-  .hero {
-    padding: 100px 20px;
-  }
-
-  .intro {
-    padding: 100px 20px;
-    margin-top: 60px;
-  }
-
-  .features,
-  .about,
-  #faq,
-  .waitlist {
-    padding: 100px 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-  }
-
-  .card {
-    padding: 30px;
-  }
-}
-
-/* Small screens (phones) */
 @media (max-width: 600px) {
-  .logo {
-    width: 180px;
-  }
-
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-
-  .intro h2,
-  .features h2,
-  .about h2,
-  .waitlist h2,
-  #faq h2 {
-    font-size: 1.5rem;
-  }
-
-  .intro p,
-  .about p,
-  #faq p {
-    font-size: 1rem;
-  }
-
-  #faq div {
-    padding: 15px;
-  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem; }
 }
