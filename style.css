@@ -34,13 +34,13 @@ img {
 
 .logo {
   width: 100%;
-  max-width: 480px;
+  max-width: 540px;
   height: auto;
   margin: 0 auto 25px;
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0 0 10px;
 }
 
@@ -267,7 +267,7 @@ footer {
 /* Medium screens (tablets) */
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .intro h2,
@@ -324,11 +324,11 @@ footer {
 /* Small screens (phones) */
 @media (max-width: 600px) {
   .logo {
-    width: 140px;
+    width: 180px;
   }
 
   .hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .intro h2,
