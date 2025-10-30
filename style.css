@@ -46,12 +46,29 @@ p, li, input, button {
   border-bottom: 6px solid #F5F2EA;
 }
 
+/* Default (desktop / large screens) */
 .logo {
   width: 100%;
-  max-width: 540px;
+  max-width: 640px;   /* previously 540px */
   height: auto;
   margin: 0 auto 25px;
 }
+
+/* Larger on very large displays */
+@media (min-width: 1400px) {
+  .logo {
+    max-width: 720px;
+  }
+}
+
+/* Larger on mobile */
+@media (max-width: 600px) {
+  .logo {
+    width: 90%;        /* previously 180px fixed width */
+    max-width: 420px;
+  }
+}
+
 
 .hero h1 { margin-bottom: 10px; }
 .hero p { font-size: 1.1rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
