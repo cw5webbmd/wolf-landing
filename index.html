@@ -35,6 +35,167 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- His / Ours / Hers Ownership Section Styles -->
+  <style>
+    .ownership-map {
+      padding: 3rem 1.5rem;
+      background: #050816;
+      color: #f9fafb;
+    }
+
+    .ownership-map__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .ownership-map__header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .ownership-map__header h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .ownership-map__header p {
+      font-size: 0.98rem;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    .ownership-map__columns {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .ownership-map__columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+      }
+    }
+
+    .ownership-map__column {
+      border-radius: 1rem;
+      padding: 1.5rem 1.25rem;
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ownership-map__column::before {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      top: 0;
+      height: 4px;
+    }
+
+    .ownership-map__column--his::before {
+      background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+    }
+
+    .ownership-map__column--ours::before {
+      background: linear-gradient(90deg, #7c3aed, #a855f7);
+    }
+
+    .ownership-map__column--hers::before {
+      background: linear-gradient(90deg, #ec4899, #f97316);
+    }
+
+    .ownership-map__column h3 {
+      font-size: 1.25rem;
+      margin: 0.25rem 0 0;
+      font-weight: 600;
+    }
+
+    .ownership-map__subtitle {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .ownership-map__asset-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .ownership-map__asset {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .ownership-map__icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(148, 163, 184, 0.08);
+    }
+
+    .ownership-map__column--his .ownership-map__icon {
+      border: 1px solid rgba(59, 130, 246, 0.7);
+    }
+
+    .ownership-map__column--ours .ownership-map__icon {
+      border: 1px solid rgba(139, 92, 246, 0.7);
+    }
+
+    .ownership-map__column--hers .ownership-map__icon {
+      border: 1px solid rgba(236, 72, 153, 0.7);
+    }
+
+    .ownership-map__label {
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ownership-map__callout {
+      margin-top: 0.75rem;
+      padding: 0.9rem 0.85rem;
+      border-radius: 0.8rem;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.5);
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    .ownership-map__footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ownership-map__footer strong {
+      color: #f9fafb;
+    }
+  </style>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -74,6 +235,108 @@
     <p>WOLF Trusts & Estate Planning empowers families to take control of their financial legacy without paying traditional law firm prices. Our adaptive platform helps you create attorney-grade <strong>Revocable Living Trusts</strong>, <strong>Wills</strong>, <strong>Powers of Attorney</strong>, and <strong>Healthcare Directives</strong>—all online and fully state-compliant.</p>
     <p>Whether you’re protecting your first home, updating your will, or securing your children’s future, WOLF simplifies every step. You’ll receive clear guidance, digital signing options, and ongoing support through our annual update subscription. WOLF stands for <strong>Wealth, Ownership, Legacy, and Family</strong>—the four pillars of true financial security.</p>
     <p>Join thousands of Americans choosing peace of mind through WOLF’s modern estate planning solutions.<br>Your legacy deserves protection—start yours today.</p>
+  </section>
+
+  <!-- HIS / OURS / HERS OWNERSHIP MAP -->
+  <section class="ownership-map" id="ownership">
+    <div class="ownership-map__inner">
+      <header class="ownership-map__header">
+        <h2>What’s Mine, What’s Yours, What’s Ours</h2>
+        <p>
+          Every asset in your household belongs in one of three buckets: <strong>His</strong>, <strong>Hers</strong>, or <strong>Ours</strong>. 
+          How those assets are titled (and whether they sit inside a trust) determines where they actually go if something happens to you.
+        </p>
+      </header>
+
+      <div class="ownership-map__columns">
+        <!-- His column -->
+        <article class="ownership-map__column ownership-map__column--his" aria-label="His assets">
+          <h3>His</h3>
+          <p class="ownership-map__subtitle">Individually owned assets</p>
+          <ul class="ownership-map__asset-list">
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🏦</span>
+              <span class="ownership-map__label">Checking account (in his name only)</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">💳</span>
+              <span class="ownership-map__label">Personal credit card</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🚗</span>
+              <span class="ownership-map__label">Car titled only to him</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">⌚</span>
+              <span class="ownership-map__label">Watch or hobby collection</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Ours column -->
+        <article class="ownership-map__column ownership-map__column--ours" aria-label="Joint assets">
+          <h3>Ours</h3>
+          <p class="ownership-map__subtitle">Joint or marital assets</p>
+          <ul class="ownership-map__asset-list">
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🏠</span>
+              <span class="ownership-map__label">Family home (titled jointly)</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🏦</span>
+              <span class="ownership-map__label">Joint savings or checking account</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🚙</span>
+              <span class="ownership-map__label">Shared family vehicle</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">📈</span>
+              <span class="ownership-map__label">Joint investment or brokerage account</span>
+            </li>
+          </ul>
+
+          <div class="ownership-map__callout">
+            <p>
+              Without clear titling, trusts, and beneficiary designations, these “ours” assets may not automatically go 
+              where you expect. State law and the probate court decide what happens when there is no estate plan.
+            </p>
+          </div>
+        </article>
+
+        <!-- Hers column -->
+        <article class="ownership-map__column ownership-map__column--hers" aria-label="Her assets">
+          <h3>Hers</h3>
+          <p class="ownership-map__subtitle">Individually owned assets</p>
+          <ul class="ownership-map__asset-list">
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🏦</span>
+              <span class="ownership-map__label">Checking account (in her name only)</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">💳</span>
+              <span class="ownership-map__label">Personal credit card</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">👜</span>
+              <span class="ownership-map__label">Handbags, jewelry, or luxury items</span>
+            </li>
+            <li class="ownership-map__asset">
+              <span class="ownership-map__icon">🏍️</span>
+              <span class="ownership-map__label">Motorcycle or vehicle titled only to her</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <footer class="ownership-map__footer">
+        <p>
+          <strong>Key idea:</strong> Ownership and titling decide where assets go by default. 
+          WOLF helps you move assets from “who owns it now” to “who should receive it later” through 
+          coordinated trusts, wills, and beneficiary designations—under your rules, not the state’s.
+        </p>
+      </footer>
+    </div>
   </section>
 
   <!-- FEATURES -->
